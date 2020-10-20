@@ -62,7 +62,6 @@ export default function ImageCard({ member, memberTags}) {
           <CardMedia
             className={classes.media}
             image={member.imageUrl}
-            //{process.env.PUBLIC_URL + '/assets/germanyLandscape.jpg'}
           />
         </Grid>
         <Grid item xs={12}>

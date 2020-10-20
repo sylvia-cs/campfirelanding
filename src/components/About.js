@@ -3,7 +3,7 @@ import { makeStyles } from '@material-ui/core/styles';
 import { MovieFilter } from '@material-ui/icons';
 import { CssBaseline, Grid } from '@material-ui/core';
 import useWindowPosition from '../hook/useWindowPosition';
-import Map from './Map';
+import MapLayout from './MapLayout';
 import AboutTags from './AboutTags';
 
 const useStyles = makeStyles((theme) => ({
@@ -42,7 +42,7 @@ export default function() {
                 </Grid>
 
                 <Grid item xs={12}>
-                    <Map />
+                    <MapLayout />
                 </Grid>
                 <Grid item xs={12}>
                     <AboutTags />

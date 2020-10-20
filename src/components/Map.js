@@ -1,41 +1,32 @@
-import React from 'react'
+// or, use google-map-react??
 import { makeStyles } from '@material-ui/core/styles'; 
-import { MovieFilter } from '@material-ui/icons';
-import { CssBaseline } from '@material-ui/core';
-import useWindowPosition from '../hook/useWindowPosition';
+import React from 'react';
 
+//  image: `{process.env.PUBLIC_URL + 'assets/map.png'}`,
 const useStyles = makeStyles((theme) => ({
-    root: {
-        minHeight: '100vh', 
-        display: 'flex', 
-        // justifyContent: 'center', 
-        // alignItems: 'center', 
-        [theme.breakpoints.down("md")]: {
-            flexDirection: 'column', 
-        },
-        textAlign: 'center',
+    container: {
     },
-    titleWrapper: {
-        margin: '3rem',
+    map: {
+        display: 'block',
+        width: '100%',
+        height: 'auto',
     },
+    pin: {
+        padding: '4rem 3rem',
+        position: 'absolute',
+        width: '10rem'
+    },
+    // pin:hover _what's the react version of this?
 
-    title: {
-        fontFamily: 'Alef',
-        fontSize: '4.5rem',
-        margin: '-1rem',
-        color: 'white',
-    },
 }))
 
+// not sure how to overlay images..
 export default function() {
     const classes = useStyles();  
     return (
-        <div className={classes.root}>
-            <div className={classes.titleWrapper}>
-                <h1 className={classes.title}>map of schools we're at</h1>
-            </div>
-
-            
+        <div className={classes.container}>
+            <img src={process.env.PUBLIC_URL + 'assets/map.png'} alt='map of US'></img>
+            <img className={classes.pin} src={process.env.PUBLIC_URL + 'assets/pin.png'}></img>
         </div>
-    )
+)
 }

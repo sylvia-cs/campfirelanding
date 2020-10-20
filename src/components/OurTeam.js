@@ -7,6 +7,7 @@ import teamMembers from "../static/teamMembers";
 import TeamMemberCard from './TeamMemberCard';
 import TagArray from './TagArray';
 import teamMemberTags from "../static/teamMemberTags";
+import ProfileCard from './ProfileCard';
 
 const useStyles = makeStyles((theme) => ({
     root: {
@@ -25,7 +26,7 @@ const useStyles = makeStyles((theme) => ({
     title: {
         fontFamily: 'Alef',
         fontSize: '6rem',
-        margine: '-1rem',
+        margin: '-1rem',
         color: 'white',
     },
 }))
@@ -43,8 +44,7 @@ export default function() {
             >
                 <Grid item xs={12}>
                 <div className={classes.titleWrapper}>
-                <h1 className={classes.title}>our team</h1>
-                who believe in the power of connection. just testing out the text:-)
+                    <h1 className={classes.title}>our team</h1>
                 </div>
                 </Grid>
 
@@ -69,6 +69,7 @@ export default function() {
                     <TeamMemberCard member={teamMembers[4]} />
                 </Grid>
             </Grid>
+            <ProfileCard member={teamMembers[4]}/>
             
         </div>
     )

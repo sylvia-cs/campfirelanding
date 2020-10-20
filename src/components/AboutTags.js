@@ -1,7 +1,7 @@
 import React from 'react'
 import { makeStyles } from '@material-ui/core/styles'; 
 import { CssBaseline, Grid } from '@material-ui/core';
-import landingPageTags from "../static/landingPageTags";
+import aboutTags from "../static/aboutTags";
 import TagArray from './TagArray';
 
 
@@ -16,8 +16,7 @@ const useStyles = makeStyles((theme) => ({
     },
     title: {
         fontFamily: 'Alef',
-        fontSize: '4.5rem',
-        margin: '2rem',
+        fontSize: '3rem',
         color: 'white',
         marginBottom: '-1rem',
         
@@ -38,7 +37,7 @@ export default function() {
                     <h1 className={classes.title}>so, what do you want <br/> to connect about?</h1>
                 </Grid>
                 <Grid item xs={12}>
-                    <TagArray tags={landingPageTags} />
+                    <TagArray tags={aboutTags} />
                 </Grid>
 
             </Grid>

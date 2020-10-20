@@ -31,8 +31,8 @@ const teamMembers = [
 
     {
         name: 'Vanessa', 
-        description: 'Role',
-        imageUrl: process.env.PUBLIC_URL + 'assets/profile.jpg',
+        description: 'Frontend Developer',
+        imageUrl: process.env.PUBLIC_URL + 'assets/Vanessa.png',
         tags: teamMemberTags[4]
     }, 
 
