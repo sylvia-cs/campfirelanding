@@ -4,7 +4,6 @@ import { MovieFilter } from '@material-ui/icons';
 import { CssBaseline, Grid } from '@material-ui/core';
 import useWindowPosition from '../hook/useWindowPosition';
 import teamMembers from "../static/teamMembers";
-import TeamMemberCard from './TeamMemberCard';
 import TagArray from './TagArray';
 import teamMemberTags from "../static/teamMemberTags";
 import ProfileCard from './ProfileCard';
@@ -32,44 +31,27 @@ const useStyles = makeStyles((theme) => ({
 }))
 
 export default function() {
-    const classes = useStyles();  
+    const classes = useStyles(); 
     return (
-        
         <div className={classes.root} id="ourTeam">
-            <Grid 
+            <Grid>
                 container
                 spacing={6}
                 justify="center"
                 alignItems="center"
-            >
-                <Grid item xs={12}>
+            </Grid>
+            <Grid item xs={12}>
                 <div className={classes.titleWrapper}>
                     <h1 className={classes.title}>our team</h1>
                 </div>
-                </Grid>
-
-                <Grid item md={4} sm={6} xs={12}>
-                    <TeamMemberCard member={teamMembers[0]}/>
-                    
-                </Grid>
-
-                <Grid item md={4} sm={6} xs={12}>
-                    <TeamMemberCard member={teamMembers[1]} />
-                </Grid>
-
-                <Grid item md={4} sm={6} xs={12}>
-                    <TeamMemberCard member={teamMembers[2]} />
-                </Grid>
-
-                <Grid item md={4} sm={6} xs={12}>
-                    <TeamMemberCard member={teamMembers[3]} />
-                </Grid>
-
-                <Grid item md={4} sm={6} xs={12}>
-                    <TeamMemberCard member={teamMembers[4]} />
-                </Grid>
             </Grid>
-            <ProfileCard member={teamMembers[4]}/>
+            <Grid>
+                <div> {
+                    teamMembers.map(member => <ProfileCard member={member} />)
+                    }
+                </div>
+            </Grid>
+
             
         </div>
     )

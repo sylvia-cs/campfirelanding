@@ -88,7 +88,7 @@ const landingPageTags = [
     }, 
     {
         title: 'California',
-        color: '#ff6b84',
+        color: 'rgba(255, 154, 117, 1)',
     }, 
     {
         title: 'Buddhist',

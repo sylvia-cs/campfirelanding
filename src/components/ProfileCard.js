@@ -4,9 +4,10 @@ import { MovieFilter } from '@material-ui/icons';
 import { CssBaseline, Grid } from '@material-ui/core';
 import useWindowPosition from '../hook/useWindowPosition';
 import teamMembers from "../static/teamMembers";
-import TeamMemberCard from './TeamMemberCard';
 import TagArray from './TagArray';
 import teamMemberTags from "../static/teamMemberTags";
+
+// this file styles the profile card and parses json data into each html component
 
 const useStyles = makeStyles((theme) => ({
     container: {
@@ -65,7 +66,7 @@ export default function ProfileCard({ member }) {
                 <img className={classes.imgBox} src={member.imageUrl} alt='profile-pic'/>
                 <h4 className={classes.name}>{ member.name }</h4>
                 <h5 className={classes.desc}>{ member.description }</h5>
-                <p className={classes.bio}>Hi! This is a placeholder for a brief bio. Tags below.</p>
+                <p className={classes.bio}>{ member.bio }</p>
             </div>
         </div>
     )
