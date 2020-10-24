@@ -55,6 +55,10 @@ const useStyles = makeStyles((theme) => ({
         color: '#ff9f87', 
         fontSize: '4rem',
     },
+    lines: {
+        align: 'left',
+        width: '80%',
+    }
 })) 
 
 export default function Header() {
@@ -115,11 +119,13 @@ export default function Header() {
             <div className={classes.containerLeft}>
                 <img src={`${process.env.PUBLIC_URL + '/assets/dog.png'}`}></img>
             </div>
-            <div className={classes.containerRight}> 
-                <h1 className={classes.title}>campfire</h1>
-                <h1 className={classes.title}>convos</h1>
+            <div>
+                <div className={classes.containerRight}> 
+                    <h1 className={classes.title}>campfire</h1>
+                    <h1 className={classes.title}>convos</h1>
+                </div>
+                <img className={classes.lines} src={`${process.env.PUBLIC_URL + '/assets/lines.png'}`}></img>
             </div>
-            
         </div>
     )
 }

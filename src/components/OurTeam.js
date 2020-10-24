@@ -34,21 +34,19 @@ export default function() {
     const classes = useStyles(); 
     return (
         <div className={classes.root} id="ourTeam">
-            <Grid>
+            {/* <Grid>
                 container
                 spacing={6}
                 justify="center"
                 alignItems="center"
-            </Grid>
+            </Grid> */}
             <Grid item xs={12}>
                 <div className={classes.titleWrapper}>
                     <h1 className={classes.title}>our team</h1>
                 </div>
             </Grid>
             <Grid>
-                <div> {
-                    teamMembers.map(member => <ProfileCard member={member} />)
-                    }
+                <div> {teamMembers.map(member => <ProfileCard member={member} />)}
                 </div>
             </Grid>
 
